@@ -25,8 +25,8 @@
                             <h3 class="card-title">ToDo List</h3>
                             <hr>
                             <div class="form-check" v-for="(toDo, i) in toDoList">
-                                <input class="form-check-input" type="checkbox" value="" :id="'flexCheckDefault_' + i">
-                                <label class="form-check-label" :for="'flexCheckDefault_' + i">{{toDo.text}}</label>
+                                <input class="form-check-input" type="checkbox" value="" :id="'flexCheckDefault_' + i" v-model="toDo.isDone">
+                                <label class="form-check-label" :class="'text-decoration-line-through' : toDo.isDone" :for="'flexCheckDefault_' + i">{{toDo.text}}</label>
                             </div>
                         </div>
                     </div>
