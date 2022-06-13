@@ -35,15 +35,17 @@ new Vue({
 
         // Aggiungi to do
         addItem() {
+            if (this.newToDoText === "") {
+            } else {
             // Pusho il nuovo oggetto nell'array
             this.toDoList.push({
                 text: this.newToDoText,
                 isDone: false,
             });
+            };
 
             // Resetto la variabile dell'input
             this.newToDoText = "";
-
         },
     },
 
