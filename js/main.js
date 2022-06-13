@@ -21,12 +21,29 @@ new Vue({
                 isDone: false,
             },
         ],
+        newToDoText: "",
     },
 
     // App methods
     methods: {
+
+        // Rimuovi to do
         removeItem(index) {
+            // Elimino l'oggetto dell'array all'indice selezionato
             this.toDoList.splice(index, 1);
+        },
+
+        // Aggiungi to do
+        addItem() {
+            // Pusho il nuovo oggetto nell'array
+            this.toDoList.push({
+                text: this.newToDoText,
+                isDone: false,
+            });
+
+            // Resetto la variabile dell'input
+            this.newToDoText = "";
+
         },
     },
 
