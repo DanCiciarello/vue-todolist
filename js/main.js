@@ -12,6 +12,14 @@ new Vue({
                 text: "Fare la spesa",
                 isDone: false,
             },
+            {
+                text: "Portare fuori il cane",
+                isDone: false,
+            },
+            {
+                text: "Aprire un ticket",
+                isDone: false,
+            },
         ],
     },
 

@@ -9,6 +9,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js' integrity='sha512-pSyYzOKCLD2xoGM1GwkeHbdXgMRVsSqQaaUoHskx/HF09POwvow2VfVEdARIYwdeFLbu+2FCOTRYuiyeGxXkEg==' crossorigin='anonymous'></script>
     <!-- Bootstrap -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css' integrity='sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw==' crossorigin='anonymous'/>
+    <!-- Fontawesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css' integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==' crossorigin='anonymous'/>
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -24,9 +26,10 @@
                         <div class="card-body">
                             <h3 class="card-title">ToDo List</h3>
                             <hr>
-                            <div class="form-check" v-for="(toDo, i) in toDoList">
+                            <div class="form-check mb-4" v-for="(toDo, i) in toDoList">
                                 <input class="form-check-input" type="checkbox" value="" :id="'flexCheckDefault_' + i" v-model="toDo.isDone">
-                                <label class="form-check-label" :class="toDo.isDone ? 'text-decoration-line-through'" :for="'flexCheckDefault_' + i">{{toDo.text}}</label>
+                                <label class="form-check-label" :class="toDo.isDone ? 'text-decoration-line-through' : ''" :for="'flexCheckDefault_' + i">{{toDo.text}}</label>
+                                <button type="button" class="btn btn-outline-danger btn-sm border-0 ms-2"><i class="fa-solid fa-xmark"></i></button>
                             </div>
                         </div>
                     </div>
