@@ -29,7 +29,7 @@
                             <div class="form-check mb-4" v-for="(toDo, i) in toDoList">
                                 <input class="form-check-input" type="checkbox" value="" :id="'flexCheckDefault_' + i" v-model="toDo.isDone">
                                 <label class="form-check-label" :class="toDo.isDone ? 'text-decoration-line-through' : ''" :for="'flexCheckDefault_' + i">{{toDo.text}}</label>
-                                <button type="button" class="btn btn-outline-danger btn-sm border-0 ms-2"><i class="fa-solid fa-xmark"></i></button>
+                                <button type="button" class="btn btn-outline-danger btn-sm border-0 ms-2" @click="removeItem(i)"><i class="fa-solid fa-xmark"></i></button>
                             </div>
                         </div>
                     </div>
