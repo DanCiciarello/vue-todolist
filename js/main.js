@@ -21,6 +21,7 @@ new Vue({
                 isDone: false,
             },
         ],
+        
         newToDoText: "",
     },
 
