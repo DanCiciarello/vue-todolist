@@ -43,7 +43,6 @@ new Vue({
                 isDone: false,
             });
             };
-
             // Resetto la variabile dell'input
             this.newToDoText = "";
         },
